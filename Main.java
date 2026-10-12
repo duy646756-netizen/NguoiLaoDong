@@ -12,8 +12,9 @@ public class Main {
             return;
         }
 
-                                String vien = "+-------------+----------------------+------+------------+---------------+-------------+";
-        System.out.printf("| %-11s | %-20s | %4s | %10s | %-10s | %11s |%n",
+                String vien = "+-------------+----------------------+------+------------+---------------+-------------+";
+                System.out.println(vien);
+                System.out.printf("| %-11s | %-20s | %4s | %10s | %-13s | %11s |%n",
                 "Loai", "Ho ten", "Tuoi", "Luong CB", "Chi tiet", "Luong");
         System.out.println(vien);
 

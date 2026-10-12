@@ -41,7 +41,7 @@ public class Nhanvien extends NguoiLaoDong {
 
        @Override
     public void Hien() {
-        System.out.printf("| %-11s | %-20s | %4d | %10s | %-10s | %11s |%n",
+        System.out.printf("| %-11s | %-20s | %4d | %10s | %-13s | %11s |%n",
                 "Nhan vien", getHoTen(), getTuoi(), dinhDang(getLuongCoBan()),
                 soNgayCong + " ngay", dinhDang(TinhLuong()));
     }
