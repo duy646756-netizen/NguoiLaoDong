@@ -21,9 +21,8 @@ public class Giangvien extends NguoiLaoDong {
         this.soTietDay = soTietDay;
     }
 
-    // Luong = luong co ban (1 tiet) x so tiet day
-    public double TinhLuong() {
-        return getLuongCoBan() * soTietDay;
+        public double TinhLuong() {
+        return getLuongCoBan() + soTietDay * 200000;
     }
 
     // Dinh dang so tien: 9000000 -> 9,000,000
@@ -40,12 +39,10 @@ public class Giangvien extends NguoiLaoDong {
         sc.nextLine();
     }
 
-    @Override
+        @Override
     public void Hien() {
-        System.out.println("[Giang vien] Ho ten: " + getHoTen()
-                + " | Tuoi: " + getTuoi()
-                + " | Luong CB: " + dinhDang(getLuongCoBan())
-                + " | Tiet day: " + soTietDay
-                + " | Luong: " + dinhDang(TinhLuong()));
+        System.out.printf("| %-11s | %-20s | %4d | %10s | %-13s | %11s |%n",
+                "Giang vien", getHoTen(), getTuoi(), dinhDang(getLuongCoBan()),
+                soTietDay + " tiet", dinhDang(TinhLuong()));
     }
 }

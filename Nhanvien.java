@@ -21,9 +21,8 @@ public class Nhanvien extends NguoiLaoDong {
         this.soNgayCong = soNgayCong;
     }
 
-    // Luong = luong co ban (1 ngay) x so ngay cong
-    public double TinhLuong() {
-        return getLuongCoBan() * soNgayCong;
+        public double TinhLuong() {
+        return getLuongCoBan() / 26 * soNgayCong;
     }
 
     // Dinh dang so tien: 9000000 -> 9,000,000
@@ -40,12 +39,10 @@ public class Nhanvien extends NguoiLaoDong {
         sc.nextLine();
     }
 
-    @Override
+       @Override
     public void Hien() {
-        System.out.println("[Nhan vien] Ho ten: " + getHoTen()
-                + " | Tuoi: " + getTuoi()
-                + " | Luong CB: " + dinhDang(getLuongCoBan())
-                + " | Ngay cong: " + soNgayCong
-                + " | Luong: " + dinhDang(TinhLuong()));
+        System.out.printf("| %-11s | %-20s | %4d | %10s | %-13s | %11s |%n",
+                "Nhan vien", getHoTen(), getTuoi(), dinhDang(getLuongCoBan()),
+                soNgayCong + " ngay", dinhDang(TinhLuong()));
     }
 }
