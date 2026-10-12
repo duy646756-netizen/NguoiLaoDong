@@ -21,9 +21,8 @@ public class Nhanvien extends NguoiLaoDong {
         this.soNgayCong = soNgayCong;
     }
 
-    // Luong = luong co ban (1 ngay) x so ngay cong
-    public double TinhLuong() {
-        return getLuongCoBan() * soNgayCong;
+        public double TinhLuong() {
+        return getLuongCoBan() / 26 * soNgayCong;
     }
 
     // Dinh dang so tien: 9000000 -> 9,000,000

@@ -21,9 +21,8 @@ public class Giangvien extends NguoiLaoDong {
         this.soTietDay = soTietDay;
     }
 
-    // Luong = luong co ban (1 tiet) x so tiet day
-    public double TinhLuong() {
-        return getLuongCoBan() * soTietDay;
+        public double TinhLuong() {
+        return getLuongCoBan() + soTietDay * 200000;
     }
 
     // Dinh dang so tien: 9000000 -> 9,000,000
