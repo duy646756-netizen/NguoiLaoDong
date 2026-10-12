@@ -40,12 +40,10 @@ public class Giangvien extends NguoiLaoDong {
         sc.nextLine();
     }
 
-    @Override
+        @Override
     public void Hien() {
-        System.out.println("[Giang vien] Ho ten: " + getHoTen()
-                + " | Tuoi: " + getTuoi()
-                + " | Luong CB: " + dinhDang(getLuongCoBan())
-                + " | Tiet day: " + soTietDay
-                + " | Luong: " + dinhDang(TinhLuong()));
+        System.out.printf("| %-11s | %-20s | %4d | %10s | %-10s | %11s |%n",
+                "Giang vien", getHoTen(), getTuoi(), dinhDang(getLuongCoBan()),
+                soTietDay + " tiet", dinhDang(TinhLuong()));
     }
 }
